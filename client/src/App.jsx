@@ -53,8 +53,6 @@ const App = () => {
           <Route path='builder/:resumeId' element={<ResumeBuilder />} />
         </Route>
         <Route path='view/:resumeId' element={<Preview />} />
-
-
       </Routes>
     </>
   )

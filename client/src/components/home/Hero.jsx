@@ -91,7 +91,7 @@ const Hero = () => {
 
                     {/* Headline + CTA */}
                     <h1 className="text-5xl md:text-6xl font-semibold max-w-5xl text-center mt-4 md:leading-17.5">
-                        Land Your Dream Job with <span className=" bg-linear-to-r from-green-700 to-green-600 bg-clip-text text-transparent text-nowrap"> AI-Powered </span> Resume.
+                        Unga Career-ku Perfect <span className=" bg-linear-to-r from-green-700 to-green-600 bg-clip-text text-transparent text-nowrap"> AI-Powered </span> Resume.
                     </h1>
 
                     <p className="max-w-md text-center text-base my-7">Create, edit and download professional resumes with AI-powered assistance.</p>
@@ -108,15 +108,15 @@ const Hero = () => {
                         </button>
                     </div>
 
-                    <p className="py-6 text-slate-600 mt-14">Trusting by leading brands, including</p>
+                    {/* <p className="py-6 text-slate-600 mt-14">Trusting by leading brands, including</p> */}
 
-                    <div className="flex flex-wrap justify-between max-sm:justify-center gap-6 max-w-3xl w-full mx-auto py-4" id="logo-container">
+                    {/* <div className="flex flex-wrap justify-between max-sm:justify-center gap-6 max-w-3xl w-full mx-auto py-4" id="logo-container">
                         {companiesLogo.map((company, index) => (
                             <React.Fragment key={index}>
                                 {company.logo}
                             </React.Fragment>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <style>

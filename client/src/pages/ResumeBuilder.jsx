@@ -143,7 +143,7 @@ const ResumeBuilder = () => {
     <div>
 
       <div className='max-w-7xl mx-auto px-4 py-6'>
-        <Link to={'/app'} onClick={() => document.title = 'Resume - Build Resume in Minutes'} className='inline-flex gap-2 items-center text-slate-500 hover:text-slate-600 transition-all '>
+        <Link to={'/app'} onClick={() => document.title = 'Namma Resume - Build Resume in Minutes'} className='inline-flex gap-2 items-center text-slate-500 hover:text-slate-600 transition-all '>
           <ArrowLeftIcon className='size-4' /> Back to Dashboard
         </Link>
       </div>

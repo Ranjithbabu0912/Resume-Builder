@@ -68,7 +68,7 @@ const Footer = () => {
                             </svg>
                         </a>
                     </div>
-                    <p className="mt-3 text-center">© 2026 <a href="https://prebuiltui.com">Resqme - Resume Builder</a></p>
+                    <p className="mt-3 text-center">© 2026 <a href="https://github.com/Ranjithbabu0912" target='_blank'>Namma Resume by Ranjith Babu</a></p>
                 </div>
             </footer>
         </>
