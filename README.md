@@ -126,4 +126,4 @@ This project is licensed under the ISC License.
 ### 👨‍💻 Author
 
 Ranjith Babu S
-Web Developer
+(Web Developer)
