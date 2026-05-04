@@ -8,47 +8,48 @@
 
 ## ✨ Features
 
-- 🤖 AI-powered resume content generation  
-- 🧾 ATS-friendly resume templates  
-- 🎨 Clean and modern UI with Tailwind CSS  
-- 🔐 Authentication & secure user data handling  
-- 🖼️ Profile image upload with background removal (ImageKit)  
-- 📄 Resume preview & export  
-- ⚡ Fast and responsive (Vite + React)  
-- 📦 RESTful API with Express & MongoDB  
+- 🤖 AI-powered resume content generation
+- 🧾 ATS-friendly resume templates
+- 🎨 Clean and modern UI with Tailwind CSS
+- 🔐 Authentication & secure user data handling
+- 🖼️ Profile image upload with background removal (ImageKit)
+- 📄 Resume preview & export
+- ⚡ Fast and responsive (Vite + React)
+- 📦 RESTful API with Express & MongoDB
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend (Client)
-- ⚛️ React 19  
-- ⚡ Vite  
-- 🎨 Tailwind CSS  
-- 🔄 Redux Toolkit  
-- 🌐 Axios  
-- 🔔 React Hot Toast  
-- 🎯 React Router DOM  
+
+- ⚛️ React 19
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🔄 Redux Toolkit
+- 🌐 Axios
+- 🔔 React Hot Toast
+- 🎯 React Router DOM
 
 ### Backend (Server)
-- 🟢 Node.js  
-- 🚀 Express.js  
-- 🍃 MongoDB + Mongoose  
-- 🔐 JWT Authentication  
-- 🔑 Bcrypt (password hashing)  
-- 📁 Multer (file uploads)  
-- 🖼️ ImageKit (image processing)  
-- 🤖 OpenAI API (AI resume generation)  
+
+- 🟢 Node.js
+- 🚀 Express.js
+- 🍃 MongoDB + Mongoose
+- 🔐 JWT Authentication
+- 🔑 Bcrypt (password hashing)
+- 📁 Multer (file uploads)
+- 🖼️ ImageKit (image processing)
+- 🤖 OpenAI API (AI resume generation)
 
 ---
 
 ## 📂 Project Structure
-namma-resume/
-│
-├── client/ # Frontend (React + Vite)
-├── server/ # Backend (Node + Express)
-└── README.md
 
+namma-resume
+├── 📁 client (React + Vite frontend)
+├── 📁 server (Node.js + Express backend)
+└── 📄 README.md
 
 ---
 
@@ -62,12 +63,15 @@ cd namma-resume
 ```
 
 ### 2️⃣ Setup Backend
+
 ```bash
 cd server
 npm install
 ```
 
+
 Create a .env file in /server:
+
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_uri
@@ -80,12 +84,15 @@ IMAGEKIT_URL_ENDPOINT=your_url
 OPENAI_API_KEY=your_openai_key
 ```
 
+
 Run backend:
+
 ```bash
 npm run server
 ```
 
 ### 3️⃣ Setup Frontend
+
 ```bash
 cd client
 npm install
@@ -94,11 +101,12 @@ npm run dev
 
 ### 🔐 Environment Variables
 
-Variable|  Description
-MONGO_URI|	MongoDB connection string
-JWT_SECRET	|JWT authentication secret
-IMAGEKIT_*	|ImageKit configuration
-OPENAI_API_KEY	|OpenAI API key
+| Vriable        | Description               |
+| -------------- | ------------------------- |
+| MONGO\*URI     | MongoDB connection string |
+| JWT_SECRET     | JWT authentication secret |
+| IMAGEKIT       | ImageKit configuration    |
+| OPENAI_API_KEY | OpenAI API key            |
 
 ### 📸 Screenshots
 
@@ -111,14 +119,15 @@ Add screenshots here (Home, Builder, Preview, etc.)
 - 🧠 Better AI suggestions
 - 📥 PDF download optimization
 
-  
 ### 🤝 Contributing
 
 Contributions are welcome! Feel free to fork this repo and submit a pull request.
 
 ### 📄 License
+
 This project is licensed under the ISC License.
 
 ### 👨‍💻 Author
+
 Ranjith Babu
 Freelance Web Developer
