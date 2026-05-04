@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 import Loader from '../components/Loader'
 import Login from './Login'
 
-
 const Layout = () => {
 
   const { user, loading } = useSelector(state => state.auth)
@@ -18,9 +17,11 @@ const Layout = () => {
     <div>
       {
         user ? (
-          <div className='min-h-screen bg-gray-100'>
+          <div className='min-h-screen bg-slate-50/50 selection:bg-blue-100 selection:text-blue-900 font-sans'>
             <Navbar />
-            <Outlet />
+            <main className="animate-fade-in">
+              <Outlet />
+            </main>
           </div>
         ) : <Login />
       }

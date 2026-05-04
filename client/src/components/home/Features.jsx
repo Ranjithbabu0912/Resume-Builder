@@ -1,59 +1,75 @@
 import React from 'react'
-import { Zap } from 'lucide-react'
-import Title from './Title';
+import { Zap, ShieldCheck, BarChart3, Wand2 } from 'lucide-react'
 
 const Features = () => {
-    const [isHover, setIsHover] = React.useState(false);
+    const [activeFeature, setActiveFeature] = React.useState(0);
+
+    const features = [
+        {
+            icon: <Wand2 className="w-6 h-6 stroke-blue-500" />,
+            title: "AI-Powered Writing",
+            description: "Let our advanced AI help you craft the perfect bullet points that highlight your achievements and impact.",
+            bgColor: "bg-blue-50",
+            borderColor: "border-blue-100"
+        },
+        {
+            icon: <BarChart3 className="w-6 h-6 stroke-indigo-500" />,
+            title: "ATS-Optimized Formats",
+            description: "Ensure your resume passes through Applicant Tracking Systems with our parsed and validated templates.",
+            bgColor: "bg-indigo-50",
+            borderColor: "border-indigo-100"
+        },
+        {
+            icon: <ShieldCheck className="w-6 h-6 stroke-purple-500" />,
+            title: "Bank-Grade Privacy",
+            description: "Your data is yours. We use end-to-end encryption to ensure your personal information stays secure.",
+            bgColor: "bg-purple-50",
+            borderColor: "border-purple-100"
+        }
+    ];
+
     return (
-        <div id='features' className='flex flex-col items-center my-10 scroll-mt-12'>
-
-
-            <div className="flex items-center gap-2 text-sm text-green-800 bg-green-400/10 rounded-full px-4 py-1">
-                <Zap width={14} />
-                <span>Simple Process</span>
+        <div id='features' className='flex flex-col items-center py-24 scroll-mt-12 relative'>
+            <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2"></div>
+            
+            <div className="flex items-center gap-2 text-sm text-blue-700 bg-blue-500/10 border border-blue-200/50 rounded-full px-5 py-1.5 mb-8 shadow-sm">
+                <Zap width={16} />
+                <span className="font-semibold tracking-wide uppercase">Simple Process</span>
             </div>
 
-            <Title title="Build your resume" description="Our streamline process helps you create a professional resume in minutes with intelligent AI-powered tools and features."/>
+            <div className="text-center max-w-2xl mb-16 px-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Build your resume with intelligent tools</h2>
+                <p className="text-lg text-slate-600">Our streamlined process helps you create a professional, standout resume in minutes using cutting-edge AI features.</p>
+            </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center xl:-mt-10">
-                <img className="max-w-2xl w-full xl:-ml-32" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/group-image-1.png" alt="" />
-                <div className="px-4 md:px-0" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
-                    <div className={"flex items-center justify-center gap-6 max-w-md group cursor-pointer"}>
-                        <div className={`p-6 group-hover:bg-violet-100 border border-transparent group-hover:border-violet-300  flex gap-4 rounded-xl transition-colors ${!isHover ? 'border-violet-300 bg-violet-100' : ''}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-6 stroke-violet-600"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /><circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /></svg>
-                            <div className="space-y-2">
-                                <h3 className="text-base font-semibold text-slate-700">Real-Time Analytics</h3>
-                                <p className="text-sm text-slate-600 max-w-xs">Get instant insights into your finances with live dashboards.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-                        <div className="p-6 group-hover:bg-green-100 border border-transparent group-hover:border-green-300 flex gap-4 rounded-xl transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-6 stroke-green-600"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" /></svg>
-                            <div className="space-y-2">
-                                <h3 className="text-base font-semibold text-slate-700">Bank-Grade Security</h3>
-                                <p className="text-sm text-slate-600 max-w-xs">End-to-end encryption, 2FA, compliance with GDPR standards.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-6 max-w-md group cursor-pointer">
-                        <div className="p-6 group-hover:bg-orange-100 border border-transparent group-hover:border-orange-300 flex gap-4 rounded-xl transition-colors">
-                            <svg className="size-6 stroke-orange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15V3" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /></svg>
-                            <div className="space-y-2">
-                                <h3 className="text-base font-semibold text-slate-700">Customizable Reports</h3>
-                                <p className="text-sm text-slate-600 max-w-xs">Export professional, audit-ready financial reports for tax or internal review.</p>
-                            </div>
-                        </div>
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-7xl px-6 w-full relative z-10">
+                <div className="flex-1 w-full flex justify-center">
+                    <div className="relative w-full max-w-lg aspect-square bg-gradient-to-tr from-slate-100 to-slate-50 rounded-[2.5rem] p-8 shadow-xl border border-white">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-[2.5rem]"></div>
+                        <img className="relative w-full h-full object-cover rounded-2xl shadow-lg border border-slate-200/50" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop" alt="Features Demo" />
                     </div>
                 </div>
+                
+                <div className="flex-1 flex flex-col gap-4 w-full max-w-lg">
+                    {features.map((feature, index) => (
+                        <div 
+                            key={index}
+                            className={`p-6 rounded-2xl transition-all duration-300 cursor-pointer border ${activeFeature === index ? 'bg-white border-slate-200 shadow-xl shadow-slate-200/50 scale-105' : 'bg-transparent border-transparent hover:bg-slate-50'}`}
+                            onMouseEnter={() => setActiveFeature(index)}
+                        >
+                            <div className="flex gap-5">
+                                <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl ${feature.bgColor} border ${feature.borderColor}`}>
+                                    {feature.icon}
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold text-slate-800">{feature.title}</h3>
+                                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-                * {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
         </div>
     )
 }
