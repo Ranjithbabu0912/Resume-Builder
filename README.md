@@ -42,16 +42,14 @@
 - 🖼️ ImageKit (image processing)
 - 🤖 OpenAI API (AI resume generation)
 
----
-
 ## 📂 Project Structure
 
-namma-resume
-├── 📁 client (React + Vite frontend)
-├── 📁 server (Node.js + Express backend)
+```
+namma-resume/
+├── 📁 client — React + Vite frontend
+├── 📁 server — Node.js + Express backend
 └── 📄 README.md
-
----
+```
 
 ## ⚙️ Installation & Setup
 
@@ -69,7 +67,6 @@ cd server
 npm install
 ```
 
-
 Create a .env file in /server:
 
 ```env
@@ -83,7 +80,6 @@ IMAGEKIT_URL_ENDPOINT=your_url
 
 OPENAI_API_KEY=your_openai_key
 ```
-
 
 Run backend:
 
@@ -101,12 +97,12 @@ npm run dev
 
 ### 🔐 Environment Variables
 
-| Vriable        | Description               |
-| -------------- | ------------------------- |
-| MONGO\*URI     | MongoDB connection string |
-| JWT_SECRET     | JWT authentication secret |
-| IMAGEKIT       | ImageKit configuration    |
-| OPENAI_API_KEY | OpenAI API key            |
+| Vriable              | Description               |
+| -------------------- | ------------------------- |
+| MONGODB_URI          | MongoDB connection string |
+| JWT_SECRET           | JWT authentication secret |
+| IMAGEKIT_PRIVATE_KEY | ImageKit configuration    |
+| OPENAI_API_KEY       | OpenAI API key            |
 
 ### 📸 Screenshots
 
@@ -129,5 +125,5 @@ This project is licensed under the ISC License.
 
 ### 👨‍💻 Author
 
-Ranjith Babu
-Freelance Web Developer
+Ranjith Babu S
+Web Developer
