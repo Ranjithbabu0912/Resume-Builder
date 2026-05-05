@@ -26,6 +26,11 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
             name: 'Minimal',
             preview: "ultra -clean design that puts your content front and center"
         },
+        {
+            id: 'modern-minimalist',
+            name: 'Modern Minimalist',
+            preview: "elegant design that puts your content center and stylish"
+        },
     ]
 
     return (

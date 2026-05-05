@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { LockIcon, Mail, User2Icon, ArrowRight } from 'lucide-react'
+import { LockIcon, Mail, User2Icon, ArrowRight, ArrowLeft } from 'lucide-react'
 import api from '../configs/api'
 import { useDispatch } from 'react-redux'
 import { login } from '../app/features/authSlice'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -43,6 +44,17 @@ const Login = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center bg-slate-950 relative overflow-hidden'>
+      {/* Back Button */}
+      <Link 
+        to="/" 
+        className="absolute top-6 left-6 z-20 flex items-center gap-2 text-slate-400 hover:text-white transition-all duration-300 group"
+      >
+        <div className="p-2.5 bg-white/5 group-hover:bg-white/10 rounded-full backdrop-blur-md border border-white/10 transition-colors">
+          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+        </div>
+        <span className="font-medium hidden sm:block">Back to Home</span>
+      </Link>
+
       {/* Background Orbs */}
       <div className='absolute top-[-10%] left-[-10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[128px] opacity-50 animate-blob'></div>
       <div className='absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[128px] opacity-50 animate-blob animation-delay-2000'></div>

@@ -33,7 +33,16 @@ export const enhanceProfessionalSummary = async (req, res) => {
         return res.status(200).json({ enhancedContent })
 
     } catch (error) {
-        return res.status(400).json({ message: error.message })
+        let errorMessage = error.message;
+        if (errorMessage && errorMessage.includes("429")) {
+            errorMessage = "AI service is currently busy or rate-limited. Please wait a moment and try again.";
+            return res.status(429).json({ message: errorMessage });
+        }
+        if (errorMessage && errorMessage.includes("503")) {
+            errorMessage = "AI service is temporarily unavailable. Please try again later.";
+            return res.status(503).json({ message: errorMessage });
+        }
+        return res.status(400).json({ message: errorMessage });
     }
 
 }
@@ -68,7 +77,16 @@ export const enhanceJobDescription = async (req, res) => {
         return res.status(200).json({ enhancedContent })
 
     } catch (error) {
-        return res.status(400).json({ message: error.message })
+        let errorMessage = error.message;
+        if (errorMessage && errorMessage.includes("429")) {
+            errorMessage = "AI service is currently busy or rate-limited. Please wait a moment and try again.";
+            return res.status(429).json({ message: errorMessage });
+        }
+        if (errorMessage && errorMessage.includes("503")) {
+            errorMessage = "AI service is temporarily unavailable. Please try again later.";
+            return res.status(503).json({ message: errorMessage });
+        }
+        return res.status(400).json({ message: errorMessage });
     }
 
 }
@@ -155,7 +173,16 @@ export const uploadResume = async (req, res) => {
         res.json({ resumeId: newResume._id })
 
     } catch (error) {
-        return res.status(400).json({ message: error.message })
+        let errorMessage = error.message;
+        if (errorMessage && errorMessage.includes("429")) {
+            errorMessage = "AI service is currently busy or rate-limited. Please wait a moment and try again.";
+            return res.status(429).json({ message: errorMessage });
+        }
+        if (errorMessage && errorMessage.includes("503")) {
+            errorMessage = "AI service is temporarily unavailable. Please try again later.";
+            return res.status(503).json({ message: errorMessage });
+        }
+        return res.status(400).json({ message: errorMessage });
     }
 
 }
